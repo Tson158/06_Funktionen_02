@@ -4,14 +4,51 @@
 // 0. a+b / a-b/ a*b / a/b  // ergebnis c
 // 1. Dateneingabe + -überprüfung 
 
+// Start der 
+startApp();
+function startApp() {
+    ausgabe(rechner(zahl1,zahl2,getOp()));
+}
+
+function getOp() {
+
+    let op = prompt("Bitte gib + , - , * oder / ein")
+    if (isOpValid()) {
+        return op;
+    } else {
+        return "nx gut"
+    }
+    return op;
+}
+
+function isOpValid(op) {
+    return true;
+}
+
+
+
+
+// function zahl1() {
+
+//     let zahl1 = prompt("Bitte gib deine 1. Zahl ein")
+//     return zahl1;
+// }
+
+// function zahl2() {
+
+//     let zahl2 = prompt("Bitte gib deine 2. Zahl ein")
+//     return zahl2;
+// }
+/****************************************************************/
+
 // 2. Auswahl Rechenart : 
 //  Vereinbarung : "+", "-", "*", "/"
-ausgabe(rechner(29,204,"+"))
-ausgabe(rechner(26,12,"-"))
-ausgabe(rechner(2,32,"*"))
-ausgabe(rechner(20,2,"/"))
-ausgabe(rechner(2,7,"#"))
-ausgabe(rechner(2,0,"/"))
+// ausgabe(rechner(29,204,"+"));
+// ausgabe(rechner(26,12,"-"));
+// ausgabe(rechner(2,32,"*"));
+// ausgabe(rechner(20,2,"/"));
+// ausgabe(rechner(2,7,"#")); //Fehler
+// ausgabe(rechner(2,0,"/")); //Fehler
 function rechner(a,b,op) {
     switch (op) {
         case "+": // Addition
@@ -27,22 +64,16 @@ function rechner(a,b,op) {
             return Division(a,b);
 
         default: // wenn was nicht stimmt (falches zeichen oder buchstaben)
-            return "Fehler sitzt vorm Monitor!"
+            return "Fehler sitzt vorm Monitor! - Versuchs nochmal mit korrektem Zeichen"
     }
 }
-
-
-
-
-
 
 /************************************************************/
 
 // 3. Fkt. Grundrechenarten : 
 
 // 3.1 Modul: Addition a+b | Test
-
-// ausgabe(addieren(7,3));
+// ausgabe(addieren(7,3))
 function addieren(a,b) {
     return a + b;
 }
