@@ -8,17 +8,34 @@
 
 // 3.1 Modul: Addition a+b | Test
 
-ausgabe(addieren(-2,1));
+ausgabe(addieren(7,3));
 function addieren(a,b) {
     return a + b;
 }
 
-// Modul: Subtraktion a-b | Test
+// 3.2 Modul: Subtraktion a-b | Test
 
-ausgabe(Subtraktion(-2,1));
+ausgabe(Subtraktion(6,7));
 function Subtraktion(a,b) {
     return a - b;
 }
+
+// 3.3 Modul: Multiplikation a*b | Test
+
+ausgabe(Multiplikation(5,3));
+function Multiplikation(a,b) {
+    return a * b;
+}
+
+// 3.4 Modul: Division a/b | Test
+
+ausgabe(Division(10,3));
+function Division(a,b) {
+    return a / b;
+}
+
+
+
 
 // 4. Ausgabe in Konsole : check!
 
