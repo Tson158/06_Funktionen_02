@@ -4,35 +4,51 @@
 // 0. a+b / a-b/ a*b / a/b  // ergebnis c
 // 1. Dateneingabe + -überprüfung 
 
-// Start der App
+// Start der Applikation / App
 startApp();
 function startApp() {
-    ausgabe(rechner(8,2,getOp()));
+    ausgabe(rechner(getZahl("1"),getZahl("2"),getOp()));
 }
 
-//  Modul: Operant eingeben | Test:
-ausgabe(getOp());
+// Modul: Zahl eingeben | Test:
+//ausgabe(getZahl("1"));
+function getZahl(numStr){
+
+    const displayStr = "Bitte Zahl " + numStr + " eingeben:"
+    let ziffer = prompt(displayStr);
+    let zahl = parseInt(ziffer);
+
+    while (isNaN(zahl) && (ziffer !== null)) {
+        ziffer =  prompt(displayStr);
+        zahl = parseInt(ziffer); 
+    }
+
+    return zahl;
+}
+
+ // Modul: Operand eingeben | Test:
+// ausgabe(getOp());
 function getOp() {
 
-    const showStr = "Bitte gib + , - , * oder / ein"
-    let op = prompt(showStr);
+    const displayStr = "Bitte + | - | * | / eingeben."
+    let op = prompt(displayStr);
 
-    while (!isOpValid(op)) {
-        op = prompt(showStr);
+    // wenn op NICHT gültig ist UND user NICHT auf Abbrechen geklickt hat   
+    while (!isOpValid(op) && (op !== null)) {
+        op = prompt(displayStr);
     }
 
     return op;
 }
 
 
-
 // Modul: Operand Prüfen | Test:
 function isOpValid(op) {
 switch (op) {
-    case: "+"
-    case: "-"
-    case: "*"
-    case: "/"
+    case "+":
+    case "-":
+    case "*":
+    case "/":
         return true;
     default:
 
