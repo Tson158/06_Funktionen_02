@@ -8,14 +8,17 @@
 
 // 3.1 Modul: Addition a+b | Test
 
-ausgabe(addieren(2,1));
+ausgabe(addieren(-2,1));
 function addieren(a,b) {
-    let c = a + b;
-    return c;
+    return a + b;
 }
 
-// Modul: Addition a+b | Test
+// Modul: Subtraktion a-b | Test
 
+ausgabe(Subtraktion(-2,1));
+function Subtraktion(a,b) {
+    return a - b;
+}
 
 // 4. Ausgabe in Konsole : check!
 
