@@ -3,7 +3,9 @@
 
 // 0. a+b / a-b/ a*b / a/b  // ergebnis c
 // 1. Dateneingabe + -überprüfung 
+
 // 2. Auswahl Rechenart : 
+
 // 3. Fkt. Grundrechenarten : 
 
 // 3.1 Modul: Addition a+b | Test
@@ -29,12 +31,15 @@ function Multiplikation(a,b) {
 
 // 3.4 Modul: Division a/b | Test
 
-ausgabe(Division(10,3));
-function Division(a,b) {
-    return a / b;
+ausgabe(Division(10,0));
+function Division(a,b) 
+{
+    if (b != 0) {
+        return a / b;  
+    } else{
+        return("Teilen durch 0 nicht möglich");
+    }
 }
-
-
 
 
 // 4. Ausgabe in Konsole : check!
