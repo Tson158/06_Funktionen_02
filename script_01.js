@@ -4,25 +4,42 @@
 // 0. a+b / a-b/ a*b / a/b  // ergebnis c
 // 1. Dateneingabe + -überprüfung 
 
-// Start der 
+// Start der App
 startApp();
 function startApp() {
-    ausgabe(rechner(zahl1,zahl2,getOp()));
+    ausgabe(rechner(8,2,getOp()));
 }
 
+//  Modul: Operant eingeben | Test:
+ausgabe(getOp());
 function getOp() {
 
-    let op = prompt("Bitte gib + , - , * oder / ein")
-    if (isOpValid()) {
-        return op;
-    } else {
-        return "nx gut"
+    const showStr = "Bitte gib + , - , * oder / ein"
+    let op = prompt(showStr);
+
+    while (!isOpValid(op)) {
+        op = prompt(showStr);
     }
+
     return op;
 }
 
+
+
+// Modul: Operand Prüfen | Test:
 function isOpValid(op) {
-    return true;
+switch (op) {
+    case: "+"
+    case: "-"
+    case: "*"
+    case: "/"
+        return true;
+    default:
+
+        return false
+    }
+
+    // return op == "+" || op == "-" || op == "*" || op == "/";
 }
 
 
@@ -43,11 +60,11 @@ function isOpValid(op) {
 
 // 2. Auswahl Rechenart : 
 //  Vereinbarung : "+", "-", "*", "/"
-// ausgabe(rechner(29,204,"+"));
+//  ausgabe(rechner(29,204,"+"));
 // ausgabe(rechner(26,12,"-"));
 // ausgabe(rechner(2,32,"*"));
-// ausgabe(rechner(20,2,"/"));
-// ausgabe(rechner(2,7,"#")); //Fehler
+//  ausgabe(rechner(20,2,"/"));
+//  ausgabe(rechner(2,7,"#")); //Fehler
 // ausgabe(rechner(2,0,"/")); //Fehler
 function rechner(a,b,op) {
     switch (op) {
