@@ -42,12 +42,21 @@ function Division(a,b)
     
 }
 
-
+/****************************************************************/
 // 4. Ausgabe in Konsole : check!
 
 // Modul: Konsolenausgabe | Test:
 
-// ausgabe("Hallo Penner!")
-function ausgabe(outputData) {
-    console.log(outputData);
-}
+// ausgabe("hallo penner");
+// ausgabe(20)
+function ausgabe(outputData) 
+{
+    if (typeof outputData == "number") 
+    {
+        console.log("Das Ergebnis ist: " + outputData);
+    } 
+    else 
+    {
+        console.log(outputData); 
+    }
+}   
