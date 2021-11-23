@@ -34,11 +34,12 @@ function Multiplikation(a,b) {
 ausgabe(Division(10,0));
 function Division(a,b) 
 {
-    if (b != 0) {
+    if (b != 0) 
+    {
         return a / b;  
-    } else{
+    } 
         return("Teilen durch 0 nicht möglich");
-    }
+    
 }
 
 
