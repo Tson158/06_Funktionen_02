@@ -51,27 +51,12 @@ switch (op) {
     case "/":
         return true;
     default:
-
         return false
     }
 
     // return op == "+" || op == "-" || op == "*" || op == "/";
 }
 
-
-
-
-// function zahl1() {
-
-//     let zahl1 = prompt("Bitte gib deine 1. Zahl ein")
-//     return zahl1;
-// }
-
-// function zahl2() {
-
-//     let zahl2 = prompt("Bitte gib deine 2. Zahl ein")
-//     return zahl2;
-// }
 /****************************************************************/
 
 // 2. Auswahl Rechenart : 
@@ -147,12 +132,10 @@ function Division(a,b)
 // ausgabe(20)
 function ausgabe(outputData) 
 {
-    if (typeof outputData == "number") 
-    {
+    if (typeof outputData == "number") {
         console.log("Das Ergebnis ist: " + outputData);
     } 
-    else 
-    {
+    else {
         console.log(outputData); 
     }
 }   
